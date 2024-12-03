@@ -3,8 +3,8 @@ const items = [
     image: "images/zachTimmins.png",
     link: "https://www.instagram.com/zachtimmins/",
   },
-  { image: "image2.jpg", link: "https://example.com/2" },
-  { image: "image3.jpg", link: "https://example.com/3" },
+  { image: "images/image2.jpg", link: "https://example.com/2" },
+  { image: "images/image3.jpg", link: "https://example.com/3" },
 ];
 
 function displayRandomItem() {
@@ -14,10 +14,16 @@ function displayRandomItem() {
   document.getElementById("randomLink").innerText = "See their work!";
 }
 
-// Refresh content on button click
-document
-  .getElementById("refreshButton")
-  .addEventListener("click", displayRandomItem);
+// Attach event listener to refresh button
+document.getElementById("refreshButton").addEventListener("click", displayRandomItem);
+
+// Attach event listener to handle link clicks securely
+document.getElementById("randomLink").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default behavior
+  const url = event.target.href;
+  window.open(url, "_blank", "noopener,noreferrer"); // Open the link securely
+});
 
 // Load a random item when the page first loads
 window.onload = displayRandomItem;
+
