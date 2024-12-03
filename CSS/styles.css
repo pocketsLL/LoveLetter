@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5c6dd; /* Background color */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #ee273e;
+}
+
+#content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  gap: 20px; /* Adds spacing between the elements */
+}
+
+img {
+  max-width: 70%; /* Scales down large images */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style the buttons and links to look the same */
+#randomLink,
+#refreshButton {
+  display: inline-block; /* Ensures both behave like buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Button background */
+  color: white;
+  text-decoration: none; /* Removes underline from the link */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Add hover effect for both */
+#randomLink:hover,
+#refreshButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Container to align buttons horizontally */
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+#refreshButton {
+  color: #ee273e;
+  background-color: white;
+}
+
+#refreshButton:hover {
+  background-color: #ee273e;
+  color: white;
+}
+
+#randomLink {
+  background-color: #ee273e;
+  color: white;
+}
+#randomLink:hover {
+  color: #ee273e;
+  background-color: white;
+}
